@@ -2384,7 +2384,7 @@ function makeConf(params) {
       testflight: 'https://raw.githubusercontent.com/lhie1/Rules/master/Surge/TestFlight.conf',
       host: 'https://raw.githubusercontent.com/lhie1/Rules/master/Auto/HOST.conf',
       urlrewrite: 'https://raw.githubusercontent.com/lhie1/Rules/master/Auto/URL%20Rewrite.conf',
-      urlreject: 'https://raw.githubusercontent.com/lhie1/Rules/master/Auto/URL%20REJECT.conf',
+      urlreject: 'https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Script.conf',
       headerrewrite: 'https://raw.githubusercontent.com/lhie1/Rules/master/Auto/Header%20Rewrite.conf',
       hostname: 'https://raw.githubusercontent.com/lhie1/Rules/master/Auto/Hostname.conf',
       mitm: 'https://raw.githubusercontent.com/lhie1/Rules/master/Surge/MITM.conf',
@@ -2559,7 +2559,7 @@ function makeConf(params) {
       }
 
       if (testflight && !rulesReplacement) {
-        let autoNewPrefix = 'https://raw.githubusercontent.com/lhie1/Rules/master/Surge3'
+        let autoNewPrefix = 'http://api.rdclient.cloud/Surge/list/empty'
         v[1] = `RULE-SET,SYSTEM,DIRECT\nRULE-SET,${autoNewPrefix}/Apple.list,🍎 Only`
         v[2] = ads ? `RULE-SET,${autoNewPrefix}/Reject.list,REJECT` : ''
         v[3] = `RULE-SET,${autoNewPrefix}/AsianTV.list,🍂 Domestic\nRULE-SET,${autoNewPrefix}/GlobalTV.list,🍃 Proxy\nRULE-SET,${autoNewPrefix}/Proxy.list,🍃 Proxy`
